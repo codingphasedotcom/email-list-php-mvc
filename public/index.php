@@ -6,7 +6,7 @@ use Core\DBConnection;
 require '../vendor/autoload.php';
 require '../core/helpers.php';
 require '../app/routes.php';
-$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__) );
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../' );
 $dotenv->load();
 // require '../app/views/index.view.php';
 
