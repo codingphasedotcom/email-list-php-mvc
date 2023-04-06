@@ -7,7 +7,9 @@ require '../vendor/autoload.php';
 require '../core/helpers.php';
 require '../app/routes.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../' );
-$dotenv->load();
+if($_ENV['APP_ENV'] !== 'production') {
+  $dotenv->load(__DIR__);
+}
 // require '../app/views/index.view.php';
 
 // $EmailModel = new EmailModel(DBConnection::start());
